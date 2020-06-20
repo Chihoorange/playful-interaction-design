@@ -119,8 +119,20 @@ function rgbToHex(r, g, b) {
 var recentlyTalked = false;
 function draw() {
   // latestData
-  const brightness = Math.round(latestData);
-  const hexColor = rgbToHex(brightness, brightness, brightness)
+  if (!isNaN(latestData)) { // latestData is a number
+    const brightness = Math.round(latestData);
+    const hexColor = rgbToHex(brightness, brightness, brightness)
 
-  document.getElementById('sphere').setAttribute('color', hexColor)
+    document.getElementById('sphere').setAttribute('color', hexColor)
+  }
+
+  if (latestData == 'winter') {
+    document.getElementById('spring').setAttribute('visible', false)
+    document.getElementById('winter').setAttribute('visible', true)
+  }
+
+  if (latestData == 'spring') {
+    document.getElementById('spring').setAttribute('visible', true)
+    document.getElementById('winter').setAttribute('visible', false)
+  }  
 }

@@ -13,7 +13,7 @@
 		<a-scene embedded arjs=’sourceType: webcam;’>
 		  <a-marker preset=’hiro’>
 
-		  	<!-- <a-entity id="spring"> -->
+		  	<a-entity id="spring" visible="false">
 			  	<!-- grand -->
 			  	<a-entity>
 		  			<a-sphere id="sphere" position="1 3.5 -0.8" radius="0.25" color="#ECECEC"></a-sphere>
@@ -88,9 +88,10 @@
 	      			 <a-cone position="0 1.42 -0.7" color="#fa4de6" height="0.05" radius-bottom="0.01" radius-top="0.05"></a-cone>
 					 <a-cylinder position="0 1.37 -0.7" rotation="0 0 0" color="#66ff69" height="0.07" radius="0.01"></a-cylinder>
 					</a-entity>
- 				<!-- </a-entity> -->
+ 				</a-entity>
+			</a-entity>
 
- 				<a-entity id="winter">
+ 			<a-entity id="winter" visible="true">
 			  	<!-- grand -->
 			  	<a-entity>
 		  			<a-sphere id="sphere" position="1 3.5 -0.8" radius="0.25" color="#ECECEC"></a-sphere>
