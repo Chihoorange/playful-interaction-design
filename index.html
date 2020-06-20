@@ -12,11 +12,28 @@
 	<body style=’margin : 0px; overflow: hidden;’>
 		<a-scene embedded arjs=’sourceType: webcam;’>
 		  <a-marker preset=’hiro’>
+		  	<!-- grand -->
 		  	<a-entity>
-	      			<a-sphere id="sphere" position="0 0.5 0" radius="0.25" color="#ECECEC"></a-sphere>
+	      			<a-sphere id="sphere" position="0 3 0" radius="0.25" color="#ECECEC"></a-sphere>
 	      			<a-plane position="0 0 0" rotation="-90 0 0" width="2" height="2" material="opacity:0.5" color="#7BC8A4">
+	      			<a-cone position="0 0 1" rotation="-90 0 0" color="#fcba03" radius-bottom="1.5" radius-top="0.5"></a-cone>
 	      			</a-plane>
 	      	</a-entity>
+	      	<!-- trees -->
+	      	<a-entity>
+	      			<a-icosahedron position="0.8 2 0.2" color="#06c736" radius="0.3"></a-icosahedron>
+	      			<a-icosahedron position="0.7 2 -0.2" color="#0cc239" radius="0.25"></a-icosahedron>
+	      			<a-icosahedron position="1 1.9 0.1" color="#17b03d" radius="0.25"></a-icosahedron>
+	      			<a-icosahedron position="0.85 2.2 0" color="#0cc239" radius="0.35"></a-icosahedron>
+	      			<a-cylinder position="0.8 1.6 0" rotation="0 0 0" color="#4a3d1a" height="0.5" radius="0.15"></a-cylinder>
+
+	      			<a-icosahedron position="-0.8 2 0.2" color="#06c736" radius="0.3"></a-icosahedron>
+	      			<a-icosahedron position="-0.7 2 -0.2" color="#0cc239" radius="0.25"></a-icosahedron>
+	      			<a-icosahedron position="-1 1.9 0.1" color="#17b03d" radius="0.25"></a-icosahedron>
+	      			<a-icosahedron position="-0.85 2.2 0" color="#0cc239" radius="0.35"></a-icosahedron>
+	      			<a-cylinder position="-0.8 1.6 0" rotation="0 0 0" color="#4a3d1a" height="0.5" radius="0.15"></a-cylinder>
+	      	</a-entity>
+
 	  	  </a-marker>
 	  	  <a-entity camera></a-entity>
 	    </a-scene>
