@@ -15,8 +15,23 @@
 		  <a-marker preset=’hiro’>
 
 		  	<a-entity id="spring" visible="false">
-		  		<a-entity light="type: spot; color: #fca503; intensity: 0.6;" position="-1 -0.7 0.3" rotation="90 0 -100" intensity="1"></a-entity>
- 				<a-entity light="type: ambient; color: #ffffff:" position="0 2.7 0" intensity="0.6"></a-entity>
+		  		<a-entity light="type: spot; color: #fca503; intensity: 0.6;" position="-1 -0.7 0.3" rotation="90 0 -100"></a-entity>
+ 				<a-entity  light="type: ambient; color: #ffffff:" position="0 2.7 0"></a-entity>
+
+ 				<!-- cloud -->
+ 				<a-entity id="cloud" material.opacity="1">
+ 					<a-icosahedron position="-2.27 2.7 -2.3" rotation="0 30 0" color="#c5dbdb" radius="0.35"></a-icosahedron>
+		  			<a-icosahedron position="-1.4 2.5 -2" rotation="0 90 0" color="#c5dbdb" radius="0.4"></a-icosahedron>
+		  			<a-icosahedron position="-1.8 2.6 -2" rotation="0 50 0" color="#c5dbdb" radius="0.3"></a-icosahedron>
+		  			<a-icosahedron position="-2 2.4 -2" rotation="0 45 0" color="#c5dbdb" radius="0.2"></a-icosahedron>
+		  			<a-icosahedron position="-1.7 2.7 -2.1" rotation="0 90 0" color="#c5dbdb" radius="0.4"></a-icosahedron>
+
+		  			<a-icosahedron position="1.6 2.45 -1.1" rotation="0 30 0" color="#c5dbdb" radius="0.2"></a-icosahedron>
+		  			<a-icosahedron position="1.8 2.22 -1.2" rotation="0 90 0" color="#c5dbdb" radius="0.25"></a-icosahedron>
+		  			<a-icosahedron position="2.4 2.1 -1.4" rotation="0 90 0" color="#c5dbdb" radius="0.3"></a-icosahedron>
+		  			<a-icosahedron position="2.22 2.46 -1.3" rotation="0 50 0" color="#c5dbdb" radius="0.4"></a-icosahedron>
+		  			<a-icosahedron position="1.9 2.4 -1.4" rotation="0 50 0" color="#c5dbdb" radius="0.3"></a-icosahedron>
+		  		</a-entity>
 
 			  	<!-- grand -->
 			  	<a-entity>
@@ -93,14 +108,31 @@
 					 <a-cylinder position="0 1.37 -0.7" rotation="0 0 0" color="#66ff69" height="0.07" radius="0.01"></a-cylinder>
 					</a-entity>
  				</a-entity>
+ 			</a-entity>
 
  				<!-- flower shower -->
- 				<a-entity id="particleFlower" position="0 2.25 -15" particle-system="preset: dust; color: #eb78ff; particleCount: 1000; opacity: 0.5; size: 2; maxAge: 5"></a-entity>
+ 				<a-entity id="particleFlower" position="0 2.25 -15" particle-system="preset: dust; color: #f7ff05; particleCount: 1000; opacity: 0.5; size: 2; maxAge: 5"></a-entity>
 			</a-entity>
 
  			<a-entity id="winter" visible="true">
- 				<a-entity light="type: spot; color: #fca503; intensity: 0.6;" position="-1 -0.7 0.3" rotation="90 0 -100" intensity="1"></a-entity>
- 				<a-entity light="type: ambient; color: #ffffff:" position="0 2.7 0" intensity="0.6"></a-entity>
+ 				<a-entity light="type: spot; color: #fca503; intensity: 0.6;" position="-1 -0.7 0.3" rotation="90 0 -100"></a-entity>
+ 				<a-entity light="type: ambient; color: #ffffff:" position="0 2.7 0"></a-entity>
+
+ 				<!-- cloud -->
+ 				 <a-entity id="cloud" material.opacity="1">
+ 					<a-icosahedron position="-2.27 2.7 -2.3" rotation="0 30 0" color="#c5dbdb" radius="0.35"></a-icosahedron>
+		  			<a-icosahedron position="-1.4 2.5 -2" rotation="0 90 0" color="#c5dbdb" radius="0.4"></a-icosahedron>
+		  			<a-icosahedron position="-1.8 2.6 -2" rotation="0 50 0" color="#c5dbdb" radius="0.3"></a-icosahedron>
+		  			<a-icosahedron position="-2 2.4 -2" rotation="0 45 0" color="#c5dbdb" radius="0.2"></a-icosahedron>
+		  			<a-icosahedron position="-1.7 2.7 -2.1" rotation="0 90 0" color="#c5dbdb" radius="0.4"></a-icosahedron>
+
+		  			<a-icosahedron position="1.6 2.45 -1.1" rotation="0 30 0" color="#c5dbdb" radius="0.2"></a-icosahedron>
+		  			<a-icosahedron position="1.8 2.22 -1.2" rotation="0 90 0" color="#c5dbdb" radius="0.25"></a-icosahedron>
+		  			<a-icosahedron position="2.4 2.1 -1.4" rotation="0 90 0" color="#c5dbdb" radius="0.3"></a-icosahedron>
+		  			<a-icosahedron position="2.22 2.46 -1.3" rotation="0 50 0" color="#c5dbdb" radius="0.4"></a-icosahedron>
+		  			<a-icosahedron position="1.9 2.4 -1.4" rotation="0 50 0" color="#c5dbdb" radius="0.3"></a-icosahedron>
+		  		</a-entity>
+
 			  	<!-- grand -->
 			  	<a-entity>
 		  			<a-sphere id="sphere" position="1 2 -0.8" radius="0.25" color="#ebbd34"></a-sphere>
@@ -181,7 +213,7 @@
  				</a-entity>
 
  				<!-- snow -->
- 				<a-entity id="paticle" position="0 2.25 -15" particle-system="preset: snow; blending: 2; size: 2; maxAge: 5; particleCount: 1000"></a-entity>
+ 				<a-entity id="paticle" position="0 2.25 -15" particle-system="preset: snow; blending: 2; size: 2; maxAge: 5; particleCount: 1000 cloud: #ffffff"></a-entity>
  			</a-entity>
 	  	  </a-marker>
 	  	  <a-entity camera></a-entity>

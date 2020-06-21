@@ -107,23 +107,29 @@ function gotRawData(thedata) {
 // serial.write(somevar) writes out the value of somevar to the serial device
 
 // Functions to convert rgb to hex
-function componentToHex(c) {
-  var hex = c.toString(16);
-  return hex.length == 1 ? "0" + hex : hex;
-}
+// function componentToHex(c) {
+//   var hex = c.toString(16);
+//   return hex.length == 1 ? "0" + hex : hex;
+// }
 
-function rgbToHex(r, g, b) {
-  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+// function rgbToHex(r, g, b) {
+//   return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+// }
+
+function mapToBrightness(num, in_min, in_max, out_min, out_max) {
+  return (num - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
 var recentlyTalked = false;
 function draw() {
   // latestData
   if (!isNaN(latestData)) { // latestData is a number
-    const brightness = Math.round(latestData);
-    const hexColor = rgbToHex(brightness, brightness, brightness)
+    const opacity = mapToBrightness(parseFloat(latestData), 0, 255, 0, 1);
+    // const brightness = Math.round(latestData);
+    // const hexColor = rgbToHex(brightness, brightness, brightness)
 
-    document.getElementById('particleFlower').setAttribute('color', hexColor)
+    // document.getElementById('particleFlower').setAttribute('particle-system', hexColor)
+    document.getElementById('cloud').setAttribute('material.opacity', opacity)
   }
 
   if (latestData == 'winter') {
