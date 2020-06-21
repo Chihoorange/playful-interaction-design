@@ -15,6 +15,7 @@
 		  <a-marker preset=’hiro’>
 
 		  	<a-entity id="spring" visible="false">
+
 			  	<!-- grand -->
 			  	<a-entity>
 		  			<a-sphere id="sphere" position="1 2 -0.8" radius="0.25" color="#ECECEC"></a-sphere>
@@ -92,10 +93,12 @@
  				</a-entity>
 
  				<!-- flower shower -->
- 				<a-entity id="paticleNumber" position="0 2.25 -15" particleCount="5000" opacity="0.5" maxAge="50" size="20" texture="images/dust.png" particle-system="preset: dust"></a-entity>
+ 				<a-entity id="paticle" position="0 2.25 -15" particle-system="preset: dust; color: #eb78ff; particleCount: 1000; opacity: 0.5; size: 2; maxAge: 5"></a-entity>
 			</a-entity>
 
  			<a-entity id="winter" visible="true">
+ 				<a-entity light="type: spot; color: #fca503; intensity: 0.6;" position="-1 -0.7 0.3" rotation="90 0 -100" intensity="1"></a-entity>
+ 				<a-entity light="type: ambient; color: #ffffff:" position="0 2.7 0" intensity="0.6"></a-entity>
 			  	<!-- grand -->
 			  	<a-entity>
 		  			<a-sphere id="sphere" position="1 2 -0.8" radius="0.25" color="#ECECEC"></a-sphere>
@@ -176,7 +179,7 @@
  				</a-entity>
 
  				<!-- snow -->
- 				<a-entity id="paticleNumber" position="0 2.25 -15" blending="2" size="5" texture="images/snow.png" particleCount="1500" maxAge="20" particle-system="preset: snow"></a-entity>
+ 				<a-entity id="paticle" position="0 2.25 -15" particle-system="preset: snow; blending: 2; size: 2; maxAge: 5; particleCount: 2500"></a-entity>
  			</a-entity>
 	  	  </a-marker>
 	  	  <a-entity camera></a-entity>
