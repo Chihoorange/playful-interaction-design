@@ -124,12 +124,12 @@ var recentlyTalked = false;
 function draw() {
   // latestData
   if (!isNaN(latestData)) { // latestData is a number
-    const opacity = mapToBrightness(parseFloat(latestData), 0, 255, 0, 1);
+    const brightness = mapToBrightness(parseFloat(latestData), 0, 255, 0, 1);
     // const brightness = Math.round(latestData);
     // const hexColor = rgbToHex(brightness, brightness, brightness)
 
     // document.getElementById('particleFlower').setAttribute('particle-system', hexColor)
-    document.getElementById('cloud').setAttribute('material.opacity', opacity)
+    document.getElementById('cloud').setAttribute('material.opacity', brightness)
   }
 
   if (latestData == 'winter') {
