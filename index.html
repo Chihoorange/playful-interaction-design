@@ -15,10 +15,12 @@
 		  <a-marker preset=’hiro’>
 
 		  	<a-entity id="spring" visible="false">
+		  		<a-entity light="type: spot; color: #fca503; intensity: 0.6;" position="-1 -0.7 0.3" rotation="90 0 -100" intensity="1"></a-entity>
+ 				<a-entity light="type: ambient; color: #ffffff:" position="0 2.7 0" intensity="0.6"></a-entity>
 
 			  	<!-- grand -->
 			  	<a-entity>
-		  			<a-sphere id="sphere" position="1 2 -0.8" radius="0.25" color="#ECECEC"></a-sphere>
+		  			<a-sphere id="sphere" position="1 2 -0.8" radius="0.25" color="#ebbd34"></a-sphere>
 		  			<a-plane position="0 0 0" rotation="-90 0 0" width="2" height="2" material="opacity:0.5" color="#7BC8A4">
 		  			<a-cone position="0 0 0.2" rotation="-90 0 0" height="0.3" color="#fcba03" radius-bottom="1.5" radius-top="0.3"></a-cone>
 		  			</a-plane>
@@ -93,7 +95,7 @@
  				</a-entity>
 
  				<!-- flower shower -->
- 				<a-entity id="paticle" position="0 2.25 -15" particle-system="preset: dust; color: #eb78ff; particleCount: 1000; opacity: 0.5; size: 2; maxAge: 5"></a-entity>
+ 				<a-entity id="paticleFlower" position="0 2.25 -15" particle-system="preset: dust; color: #eb78ff; particleCount: 1000; opacity: 0.5; size: 2; maxAge: 5"></a-entity>
 			</a-entity>
 
  			<a-entity id="winter" visible="true">
@@ -101,7 +103,7 @@
  				<a-entity light="type: ambient; color: #ffffff:" position="0 2.7 0" intensity="0.6"></a-entity>
 			  	<!-- grand -->
 			  	<a-entity>
-		  			<a-sphere id="sphere" position="1 2 -0.8" radius="0.25" color="#ECECEC"></a-sphere>
+		  			<a-sphere id="sphere" position="1 2 -0.8" radius="0.25" color="#ebbd34"></a-sphere>
 		  			<a-plane position="0 0 0" rotation="-90 0 0" width="2" height="2" material="opacity:0.5" color="#7BC8A4">
 		  			<a-cone position="0 0 0.2" rotation="-90 0 0" height="0.3" color="#c4f2ff" radius-bottom="1.5" radius-top="0.3"></a-cone>
 		  			</a-plane>
