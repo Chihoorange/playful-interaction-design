@@ -123,7 +123,7 @@ function draw() {
     const brightness = Math.round(latestData);
     const hexColor = rgbToHex(brightness, brightness, brightness)
 
-    document.getElementById('paticleFlower').setAttribute('color', hexColor)
+    document.getElementById('particleFlower').setAttribute('color', hexColor)
   }
 
   if (latestData == 'winter') {
